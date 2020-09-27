@@ -63,8 +63,11 @@ form{
   /* border: 2px solid red; for debug */
   float: right;
   margin-top: -15px;
-  margin-bottom: -5px;
+  margin-bottom: -15px;
   margin-right: 35px;
+  /* atributos abaixo faz bordas do form fica por cima das outras divs */
+  position: relative;
+  z-index: 2; 
 }
 
 form > h2{
@@ -110,7 +113,6 @@ form .campos{
 
 
 /****** SECTION EMPREENDIMENTO *******/
-
 section .empreendimento{
   background-color: #29526d;
   width: 100%;
@@ -118,6 +120,9 @@ section .empreendimento{
   text-align:center;
   color: white;
   padding: 20px 0;
+  /* atributos abaixo faz section ficar por baixo do form */
+  position: relative;
+  z-index: 1; 
 }
 
 section .empreendimento div.seta{
@@ -138,7 +143,6 @@ section .empreendimento h3{
 }
 
 /***** MOSAICO *******/
-
 .flex{
   display: flex;
 }
@@ -197,21 +201,20 @@ footer div{
 }
 
 @media screen and (max-width: 700px){
-.flex{
-  flex-wrap: wrap;
-  width: 100%;
-}
+  .flex{
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
-.flex-img{
-  width: 100%;
-  height: 300px;
-}
+  .flex-img{
+    width: 100%;
+    height: 300px;
+  }
 
  .flex-text{
-  width: 100%;
+    width: 100%;
+  }
 }
-}
-
 
 @media screen and (max-width: 500px){
   header .container div{
@@ -219,3 +222,4 @@ footer div{
     text-align: center;
   }
 }
+
